@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether-OS | Modern Messaging Dashboard</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="logo-icon">🌿</div>
+                <h2>Aether-OS</h2>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-item active"><span>💬</span> Messages</button>
+                <button class="nav-item"><span>📊</span> Analytics</button>
+                <button class="nav-item"><span>⚙️</span> Settings</button>
+            </nav>
+            <div class="user-profile-footer">
+                <div class="user-avatar">👤</div>
+                <div class="user-details">
+                    <h4>Chrispine</h4>
+                    <p>Developer</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Viewport -->
+        <main class="main-content">
+            <!-- Stats Dashboard Banner -->
+            <section class="dashboard-header">
+                <div class="stat-card">
+                    <h3>Active Rooms</h3>
+                    <p class="stat-value">4</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Messages</h3>
+                    <p class="stat-value" id="total-count">1</p>
+                </div>
+                <div class="stat-card">
+                    <h3>AI Bot Status</h3>
+                    <p class="stat-value active-status">Ready</p>
+                </div>
+            </section>
+
+            <!-- Messaging Interface Module -->
+            <section class="messaging-module">
+                <!-- Chat Window -->
+                <div class="chat-window">
+                    <header class="chat-header">
+                        <div class="chat-info">
+                            <h3>Aether Voice AI Bot</h3>
+                            <span class="online-indicator">Listening Agent Active</span>
+                        </div>
+                        <button id="clear-btn" class="clear-btn">Clear Stream</button>
+                    </header>
+
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message system">
+                            <p><strong>System:</strong> Aether AI Voice Interface initialized. Click the microphone icon or hold down space to dictate your message manually.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modern Input Strip Area -->
+                    <form class="chat-input-bar" id="chat-form">
+                        <input 
+                            type="text" 
+                            id="message-input" 
+                            placeholder="Type a message or use voice input..." 
+                            autocomplete="off" 
+                            required
+                        >
+                        
+                        <!-- Voice Processing Trigger Button -->
+                        <button type="button" id="voice-btn" class="voice-btn" title="Click to speak">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z" />
+                            </svg>
+                        </button>
+
+                        <button type="submit" class="send-btn">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                            </svg>
+                        </button>
+                    </form>
+                    <div id="voice-status-indicator" class="voice-status-hidden">Listening via Web Speech API...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
